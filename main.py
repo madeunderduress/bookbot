@@ -27,16 +27,13 @@ def count_characters(book_text):
     character_dict = {}
     lowercase = book_text.lower()
     split_list = lowercase.split()
-    staging_list = []
     for word in split_list:
         for character in word:
-            staging_list.append(character)
             character_dict[character] = 0
-
-
-        for character in staging_list:    
+    for word in split_list:
+        for character in word:    
             character_dict[character] += 1
-    
+        
     
     
             
